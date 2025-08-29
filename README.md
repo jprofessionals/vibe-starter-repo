@@ -65,7 +65,6 @@ Use whatever you want to try - but if you have no idea, here are some recommenda
 - **Your favourite editor is JetBrains IntelliJ?**
   - Use Junie
 
-
 - **No favorite editor, but prefer IDE's to terminals and want the agent to be in the IDE?**
   - Use Cursor
 
