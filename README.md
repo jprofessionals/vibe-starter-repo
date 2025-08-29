@@ -264,7 +264,7 @@ Suggested project layout for use with agents.
 - **Context7** — [https://github.com/upstash/context7](https://github.com/upstash/context7)
 - **GitHub MCP server** — [https://github.com/github/github-mcp-server](https://github.com/github/github-mcp-server)
 - **Task Master** - [claude task master](https://github.com/eyaltoledano/claude-task-master) / [task-master.dev](https://www.task-master.dev/) - a nice setup for claude with cursor, kiro, etc to make your agentic AI work according to your specifications and needs. Excellent place to get inspiration for your own setup.
-
+- **AI Dev Tasks** - [AI Dev Tasks](https://github.com/snarktank/ai-dev-tasks) - a collection of task definitions for AI agents to work on. Copy, modify and use as a starting point for your own tasks.
 
 ### Prompting guides (short, high‑signal)
 

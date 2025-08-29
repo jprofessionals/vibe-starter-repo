@@ -46,6 +46,8 @@
 
 You can either add .mdc files manually to the .cursor/rules folder, or you can use the command `New Cursor Rule` in the "chat" tab. And then follow the prompts to create the rule.
 
+More documentation on Cursor rules can be found here: [Cursor Rules](https://docs.cursor.com/en/context/rules)
+
 ## DOCS!
 
 Cursor supports adding Docs the agent can cite inline:
