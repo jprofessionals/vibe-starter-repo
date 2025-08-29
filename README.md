@@ -263,7 +263,7 @@ Suggested project layout for use with agents.
 - **MCP spec & servers** — [https://modelcontextprotocol.io/specification/](https://modelcontextprotocol.io/specification/) | [https://github.com/modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers)
 - **Context7** — [https://github.com/upstash/context7](https://github.com/upstash/context7)
 - **GitHub MCP server** — [https://github.com/github/github-mcp-server](https://github.com/github/github-mcp-server)
-- **Task Master** - [claude task master](https://github.com/eyaltoledano/claude-task-master) - a nice collection of configurations for claude, cursor, kiro, etc to make your agentic AI work according to your specifications and needs. Excellent place to get inspiration for your own setup.
+- **Task Master** - [claude task master](https://github.com/eyaltoledano/claude-task-master) / [task-master.dev](https://www.task-master.dev/) - a nice setup for claude with cursor, kiro, etc to make your agentic AI work according to your specifications and needs. Excellent place to get inspiration for your own setup.
 
 
 ### Prompting guides (short, high‑signal)
