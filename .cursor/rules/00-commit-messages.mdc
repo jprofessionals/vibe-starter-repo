@@ -1,0 +1,15 @@
+---
+description: Enforce Conventional Commits; prefer imperative, scoped messages; include rationale.
+globs:
+  - "**/*"
+alwaysApply: true
+---
+
+When generating commit messages:
+
+- Use Conventional Commits: `<type>(optional scope): <description>`
+- Allowed types: feat, fix, docs, style, refactor, perf, test, build, ci, chore, revert.
+- Keep header ≤ 72 chars; use body to explain why; add BREAKING CHANGE: footer when needed.
+- Prefer present tense, active voice.
+
+If changes are broad, structure the body with bullets and affected modules.

@@ -1,0 +1,30 @@
+# Deny AI from accessing and indexing these files
+
+# Secrets / credentials
+**/.env
+**/.env.*
+**/secrets/**
+**/*credentials*.json
+**/*.pem
+**/*.key
+
+# Common noise
+node_modules/
+.venv/
+dist/
+build/
+.out/
+.tmp/
+.cache/
+.gradle/
+__pycache__/
+
+# Large binaries / artifacts (AI doesn’t benefit)
+*.lockb
+*.bin
+*.pdf
+*.png
+*.jpg
+*.zip
+*.tar
+*.gz

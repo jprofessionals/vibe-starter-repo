@@ -1,0 +1,11 @@
+---
+description: Ktor server conventions (routing, DI, testing)
+globs:
+  - "server/**"
+alwaysApply: false
+---
+
+- Use Ktor routing modules; keep handlers thin; push business logic to services.
+- Testing: prefer `testApplication { ... }` with in-memory HTTP client; add sample test when scaffolding endpoints.
+- Validate request/response with serialization + status checks; add negative tests for 4xx/5xx paths.
+- For style, use ktlint/detekt tasks via Gradle if present; auto-fix when safe.

@@ -1,0 +1,10 @@
+---
+description: Avoid leaking secrets; never suggest committing credentials; prefer env vars/secret stores.
+globs:
+  - "**/*"
+alwaysApply: true
+---
+
+- Never read from or quote files matching .cursorignore.
+- Do not inline secrets or tokens in examples; use placeholders and environment variables.
+- For API keys, refer to the team's secret management practice.

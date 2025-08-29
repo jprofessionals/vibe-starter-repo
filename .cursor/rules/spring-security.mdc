@@ -1,0 +1,61 @@
+---
+description: Spring Boot Web Security conventions and best practices
+globs:
+  - "**/src/main/java/**/security/**"
+  - "**/src/main/java/**/config/**"
+  - "**/src/main/java/**/controller/**"
+  - "**/src/test/java/**/security/**"
+  - "**/src/main/resources/application*.yml"
+  - "**/src/main/resources/application*.properties"
+alwaysApply: false
+---
+
+## Security Configuration
+
+- Use `@EnableWebSecurity` with `SecurityFilterChain` bean configuration (Spring Security 6+ style).
+- Define security rules with `.authorizeHttpRequests()` for request-based authorization.
+- Use `.csrf(csrf -> csrf.disable())` only for stateless APIs; enable for web applications.
+- Configure CORS explicitly with `.cors(cors -> cors.configurationSource(corsConfigurationSource()))`.
+
+## Authentication
+
+- Implement `UserDetailsService` for custom user authentication logic.
+- Use `PasswordEncoder` bean (BCryptPasswordEncoder recommended) for password hashing.
+- Store sensitive data in environment variables or secure configuration stores.
+- Implement JWT authentication with proper token validation and refresh mechanisms.
+
+## Authorization
+
+- Use method-level security with `@PreAuthorize`, `@PostAuthorize` annotations.
+- Define roles with `ROLE_` prefix (e.g., `ROLE_ADMIN`, `ROLE_USER`).
+- Use `@Secured` for simple role-based access control.
+- Implement custom `AccessDecisionManager` for complex authorization logic.
+
+## Controller Security
+
+- Apply `@CrossOrigin` carefully; prefer CORS configuration over annotation.
+- Use `@Valid` for request body validation with proper error handling.
+- Implement rate limiting for public endpoints.
+- Add security headers via `SecurityFilterChain` configuration.
+
+## Testing
+
+- Use `@WithMockUser` for testing authenticated endpoints.
+- Create `@TestConfiguration` for security test setup.
+- Test both positive and negative authorization scenarios.
+- Use `TestSecurityContextHolder` for custom security context in tests.
+
+## Configuration Management
+
+- Store JWT secrets, database credentials in environment variables.
+- Use Spring Cloud Config or similar for externalized configuration.
+- Implement proper logging without exposing sensitive information.
+- Configure session management for stateful applications.
+
+## Best Practices
+
+- Never hardcode secrets or credentials in source code.
+- Use HTTPS in production; configure proper SSL/TLS.
+- Implement proper error handling without information leakage.
+- Add security headers (HSTS, CSP, X-Frame-Options) via configuration.
+- Use Spring Security's built-in protection against common attacks (CSRF, XSS, etc.).

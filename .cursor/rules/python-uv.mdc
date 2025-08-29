@@ -1,0 +1,31 @@
+---
+description: Python project standards with uv
+globs:
+  - "pyproject.toml"
+  - "src/**/*.py"
+  - "tests/**/*.py"
+alwaysApply: false
+---
+
+**Package & environment management**
+
+- Use **uv** for all dependency and environment operations.
+- Prefer `uv add`, `uv remove`, `uv lock`, `uv sync` and `uv run` over raw `pip` or `python -m venv`.
+- For tools, either add them to dev groups (recommended) and run via `uv run`, or use `uvx` for one-off runs.
+
+**Lockfile & Python pin**
+
+- Generate and commit `uv.lock` for **applications**; for published libraries, you may opt out.
+- Pin a Python version per project with `uv python pin <version>` (creates `.python-version`).
+
+**Layout & tooling**
+
+- Use the **src/** layout; keep package code under `src/` and tests under `tests/`.
+- Consolidate configuration in `pyproject.toml` for **ruff**, **pytest**, **mypy**.
+- Lint/format with Ruff (`uv run ruff format` and `uv run ruff check --fix`).
+- Run tests with Pytest (`uv run pytest`); type-check with Mypy (`uv run mypy`).
+
+**Quality bar for AI changes**
+
+- Generate focused diffs; accompany nontrivial changes with unit tests.
+- Explain trade-offs when proposing new dependencies; prefer small, maintained libs.

@@ -1,0 +1,11 @@
+---
+description: Frontend standards for Vite + TypeScript
+globs:
+  - "web/**"
+alwaysApply: false
+---
+
+- Use Vite 7 conventions; prefer ESM imports and `moduleResolution: bundler`.
+- Keep UI logic testable; co-locate `.test.ts` with code.
+- When generating code, add types at boundaries, avoid `any`, use `as const` for literals.
+- Prefer absolute imports via `tsconfig` paths when appropriate.
