@@ -16,9 +16,9 @@ Choose **one** primary editor/agent to begin. You can mix later.
 
 - **Get it:** https://www.cursor.com/download  
 - **Why it shines:** Deep codebase awareness in-editor, in‑place edits & diffs, background agents, MCP support.  
-- **1‑minute start:** Install → open this repo → press `⌘K / Ctrl+K` to “Ask AI” → run the prompt:  
-  > “Create a minimal service in `/apps/api` with one endpoint `/health`, add tests, Dockerfile, and a GH Action to run tests on PR.”
-- **good to know:** For a limited time cursor have the model `grok-code-fast-1` to use totally free. The base monthly subscription can be emptied fast if using the thinking models.
+- **1‑minute start:** Install → open this repo → enter this prompt (or variants of it) in the chat:
+  > “Make an ANGENT.md file for this project that enforces best practices for using AI agents and specifies an opinionated tech stack for a monorepo with kotlin/ktor as backend and vite/vue as frontend.” (Adjust tech stack as needed)
+- **good to know:** For a limited time cursor have the model `grok-code-fast-1` to use totally free. The base monthly subscription can be used up fast if using thinking models.
 
 **Enable MCP in Cursor:** Settings → *MCP* → “Add new server” (see [MCP servers](#recommended-mcp-servers)).  
 Docs: https://docs.cursor.com/welcome
@@ -37,7 +37,7 @@ Getting started: https://www.jetbrains.com/help/junie/get-started-with-junie.htm
 - **Get it:** `npm i -g @google/gemini-cli` (or follow docs).  
 - **Why it shines:** Local terminal workflow, ReAct loop, built‑in tools, first‑class MCP (works great with VS Code/Code Assist too).  
 - **1‑minute start:** In project root, run `gemini` then:  
-  > “Plan and implement a `scripts/release.ts` that bumps version, updates CHANGELOG from commits, tags, and opens a PR.”
+  > “Make a GEMINI.md file for this project that enforces best practices for using AI agents and specifies an opinionated tech stack for a monorepo with kotlin/ktor as backend and vite/vue as frontend.” (Adjust tech stack as needed)
 Docs: https://cloud.google.com/gemini/docs/codeassist/gemini-cli
 - **good to know:** You get a nice amount of tokens for free every day, when you run out you can fallback to the faster/cheaper flash-models, or you can supply an API key to "pay as you go".
 
@@ -54,29 +54,27 @@ Docs: https://docs.anthropic.com/en/docs/claude-code/overview
 
 - **Get access:** https://studio.firebase.google.com/  
 - **Why it shines:** Cloud dev environment for building & shipping AI‑backed apps quickly with Gemini + Firebase services (hosting, auth, data), “agentic” experiences out of the box.  
-- **1‑minute start:** New project → choose a template → let the assistant scaffold frontend + Firebase backend → deploy.
+- **1‑minute start:** New project → choose a template → let the assistant scaffold frontend + Firebase backend → deploy. Suggested prompt to see what it can deliver:
+  > "Create a web app similar to 'thoughtworks technology radar' but with a twist. The user should be able to add, remove and rank items in the radar and the app should be able to generate a report of the items in the radar."
 - **good to know:** Excellent starting point for building javascript based apps with Firebase. You can download the cloud based repo for local development at any time.
 
 ### Recommendation on what to use
 
 Use whatever you want to try - but if you have no idea, here are some recommendations:
 
-Your favourite editor is JetBrains IntelliJ?
+- **Your favourite editor is JetBrains IntelliJ?**
+  - Use Junie
 
-- Use Junie
 
-No favorite editor, but prefer IDE's to terminals and want the agent to be in the IDE?
+- **No favorite editor, but prefer IDE's to terminals and want the agent to be in the IDE?**
+  - Use Cursor
 
-- Use Cursor
+- **Want the AI agent to be outside of the IDE?**
+  - Use Gemini CLI - works well for terminal based workflows
+  - Use Claude Code - if money is *not* an issue (i.e. I do not pay for the use myself...)
 
-Want the AI agent to be outside of the IDE?
-
-- Use Gemini CLI - works well for terminal based workflows
-- Use Claude Code - if money is *not* an issue (i.e. I do not pay for the use myself...)
-
-I want to make web-first apps?
-
-- Start with Firebase Studio
+- **I want to make web-first apps?**
+  - Start with Firebase Studio
 
 ### Perform basic setup
 
@@ -241,7 +239,8 @@ Suggested project layout for use with agents.
 ```text
 .
 ├─ .cursor/          # Cursor settings + MCP config (if using Cursor)
-├─ .junie/            # Junie task/playbooks (when using Junie)
+├─ .gemini/          # Gemini CLI settings (if using Gemini CLI)
+├─ .junie/           # Junie task/playbooks (when using Junie)
 ├─ prompts/          # Saved prompts / briefs
 └─ scripts/          # Local tooling the agent can call
 
