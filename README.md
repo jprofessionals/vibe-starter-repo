@@ -10,7 +10,7 @@ Feel free to do any kind of adjustments you like to get a setup more to your lik
 
 ## Quick start (pick a path)
 
-Choose **one** primary editor/agent to begin. You can mix later.
+Choose **one** primary editor/agent to begin. You can mix later. For vibe-coding ideas/inspiration, see the [docs/vibe-ideas](docs/vibe-ideas) folder.
 
 ### Cursor (AI-first editor)
 
